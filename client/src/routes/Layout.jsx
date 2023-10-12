@@ -24,7 +24,7 @@ function Layout() {
   return (
     <div style={style.wrapper}>
       <header style={style.header}>
-        <b>express-vite</b>
+        <b>express + react</b>
       </header>
       <div style={style.main}>
         <Outlet />
