@@ -20,6 +20,10 @@ export default defineConfig(({ command, mode }) => {
     return {
       // build specific config
       plugins: [react()],
+      build: {
+        outDir: '../server/public',
+        emptyOutDir: true,
+      },
     }
   }
 })
