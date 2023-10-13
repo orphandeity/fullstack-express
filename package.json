@@ -4,13 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "setup": "cd client && npm install && cd ../server && npm install && cd ..",
     "dev": "concurrently \"cd client && npm run dev\" \"cd server && npm run dev\"",
     "build": "cd client && npm install && npm run build && cd ../server && npm install && cd ..",
     "start": "cd server && npm run start"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "concurrently": "^8.2.1"
   }
