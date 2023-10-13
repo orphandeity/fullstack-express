@@ -1,4 +1,19 @@
-import { Outlet } from 'react-router-dom'
+import { Link, Outlet, redirect } from 'react-router-dom'
+import { getSessionData, logout } from '../lib/auth'
+import { useQuery } from '@tanstack/react-query'
+import Auth from '../components/Auth'
+import Logout from '../components/Logout'
+
+const sessionQuery = () => ({
+  queryKey: ['session'],
+  queryFn: getSessionData,
+})
+
+export const action = (queryClient) => async () => {
+  await logout()
+  await queryClient.invalidateQueries(['session'])
+  return redirect('/')
+}
 
 let style = {
   wrapper: {
@@ -6,6 +21,7 @@ let style = {
     flexFlow: 'column nowrap',
     minHeight: '100vh',
     padding: 'var(--padding)',
+    backgroundColor: 'var(--background-color)',
   },
   header: {
     flex: '0 0 auto',
@@ -21,10 +37,17 @@ let style = {
 }
 
 function Layout() {
+  const { data: session } = useQuery(sessionQuery())
   return (
     <div style={style.wrapper}>
+      <Auth />
+
       <header style={style.header}>
-        <b>express + react</b>
+        <Link to="/">
+          <b>express + react</b>
+        </Link>
+        {session && <p>Hello {session.username}!</p>}
+        <Logout />
       </header>
       <div style={style.main}>
         <Outlet />

@@ -1,0 +1,40 @@
+.banner {
+  background-color: var(--background-secondary-color);
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: var(--space-20);
+  display: grid;
+  place-content: center;
+  padding-block: var(--padding);
+  box-shadow: var(--shadow);
+  outline: 1px solid var(--shadow-outline-color);
+}
+
+.layout {
+  display: grid;
+  place-content: center;
+  gap: var(--padding);
+  margin-top: var(--margin-lg);
+}
+
+.form {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: var(--padding);
+  outline: 1px solid var(--shadow-outline-color);
+  border-radius: var(--border-radius);
+  padding: var(--padding);
+  background-color: var(--background-secondary-color);
+  box-shadow: var(--shadow);
+
+  & h1 {
+    font-size: 1.5rem;
+  }
+}
+
+.inputGroup {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 0.25rem;
+}
