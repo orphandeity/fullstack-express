@@ -29,6 +29,14 @@ class AuthService {
       return done(err)
     }
   }
+
+  async userList() {
+    try {
+      return await UserModel.getUsers()
+    } catch (err) {
+      throw new Error(err)
+    }
+  }
 }
 
 module.exports = new AuthService()
