@@ -1,6 +1,6 @@
 # Full Stack Web Application Template
 
-Welcome to the Full Stack Web Application Template, a seamless integration of Express and React, designed to streamline your web development projects. This template comes pre-configured with essential features to help you build dynamic, responsive, and feature-rich web applications.
+Welcome to the Full Stack Web Application Template, a powerful tool that combines Express and React for your web development needs. This template streamlines the creation of dynamic, responsive, and secure web applications, with features like database connectivity and local authentication.
 
 ## Table of Contents
 
@@ -8,19 +8,23 @@ Welcome to the Full Stack Web Application Template, a seamless integration of Ex
 - [Getting Started](#getting-started)
   - [Development Setup](#development-setup)
   - [Production Setup](#production-setup)
+- [Database Configuration](#database-configuration)
+- [Authentication](#authentication)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
 
 ## Features
 
-- **Express & React Integration**: Seamlessly combines Express, a powerful Node.js framework, with React, the most popular JavaScript library for building user interfaces, making your application dynamic and responsive.
+- **Express & React Integration**: Seamlessly combines Express with React for dynamic, responsive web applications.
 
-- **React Router**: Pre-configured with React Router, simplifying page navigation and creating a smooth, multi-page experience for users.
+- **React Router**: Pre-configured for smooth page navigation and a multi-page user experience.
 
-- **React Query**: Efficiently manage and fetch data with React Query, simplifying data handling in React applications.
+- **React Query**: Efficient data management, simplifying data retrieval and state management in React applications.
 
-- **Express API**: Includes a secure Express API to facilitate communication between your front-end and back-end, supporting data operations like creating, reading, updating, and deleting data.
+- **Knex for Database Connectivity**: Connect to a PostgreSQL database using Knex, allowing you to store and retrieve data seamlessly.
+
+- **Passport for Local Authentication**: Implement local authentication with Passport, enabling secure username and password-based login and registration.
 
 ## Getting Started
 
@@ -29,7 +33,7 @@ Welcome to the Full Stack Web Application Template, a seamless integration of Ex
 To get started with development, follow these steps:
 
 1. Clone the repository to your local machine.
-2. Navigate to the project directory: `cd your-project-directory`
+2. Navigate to the project directory: `cd your-project-directory`.
 3. Install dependencies for both the client and server by running:
    ```sh
    npm run setup
@@ -45,7 +49,7 @@ To get started with development, follow these steps:
 For a production setup, use the following steps:
 
 1. Clone the repository to your production environment.
-2. Navigate to the project directory: `cd your-project-directory`
+2. Navigate to the project directory: `cd your-project-directory`.
 3. Install dependencies and build the client and server by running:
 
    ```sh
@@ -59,11 +63,25 @@ For a production setup, use the following steps:
    npm start
    ```
 
-If everything is set up correctly, you should see a friendly message from the server.
+## Database Configuration
+
+This template utilizes Knex for database connectivity. To configure your database connection, follow these steps:
+
+1. Navigate to the `server` directory: `cd server`.
+
+2. Open the `.env` file and add your database connection details, such as host, database name, user, and password.
+
+## Authentication
+
+The project features local authentication with Passport. To set up your authentication, you'll need to:
+
+1. Configure Passport and authentication strategies in the `server` directory.
+
+2. Add your custom authentication logic and routes as needed.
 
 ## Usage
 
-This template serves as a solid foundation for your web development projects. Customize and extend it to suit your specific needs. It's designed to save you time and effort by providing essential boilerplate code for web application development.
+This template provides a solid foundation for your web development projects. Customize and extend it to meet your specific requirements. It's designed to save you time and effort by providing essential boilerplate code for web application development.
 
 ## Contributing
 
