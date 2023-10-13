@@ -5,10 +5,10 @@ module.exports = {
   SESSION_SECRET: process.env.SESSION_SECRET,
   PORT: process.env.PORT,
   DB: {
-    PGHOST: process.env.PGHOST,
-    PGUSER: process.env.PGUSER,
-    PGPASSWORD: process.env.PGPASSWORD,
-    PGDATABASE: process.env.PGDATABASE,
-    PGPORT: process.env.PGPORT,
+    host: process.env.PGHOST,
+    port: process.env.PGPORT,
+    user: process.env.PGUSER,
+    password: process.env.PGPASSWORD,
+    database: process.env.PGDATABASE,
   },
 }

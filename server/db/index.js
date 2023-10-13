@@ -1,14 +1,8 @@
-const { DB } = require('../config')
+const { DB, NODE_ENV } = require('../config')
 
 const knex = require('knex')({
   client: 'pg',
-  connection: {
-    host: DB.PGHOST,
-    port: DB.PGPORT,
-    user: DB.PGUSER,
-    password: DB.PGPASSWORD,
-    database: DB.PGDATABASE,
-  },
+  connection: NODE_ENV === 'development' ? DB : process.env.DATABASE_URL,
   pool: { min: 0, max: 7 },
 })
 
