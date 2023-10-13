@@ -67,9 +67,15 @@ For a production setup, use the following steps:
 
 This template utilizes Knex for database connectivity. To configure your database connection, follow these steps:
 
+### Development Environment:
+
 1. Navigate to the `server` directory: `cd server`.
 
 2. Open the `.env` file and add your database connection details, such as host, database name, user, and password.
+
+### Production Environment:
+
+In a production environment, you should use the `DATABASE_URL` environment variable for your database connection. The `DATABASE_URL` environment variable should contain the connection details for your production database.
 
 ## Authentication
 
