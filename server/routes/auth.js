@@ -42,13 +42,4 @@ module.exports = (app, passport) => {
   router.get('/session', (req, res, next) => {
     return res.status(200).json(req.user ?? null)
   })
-
-  router.get('/users', async (req, res, next) => {
-    try {
-      let users = await AuthService.userList()
-      return res.status(200).json(users)
-    } catch (err) {
-      next(err)
-    }
-  })
 }

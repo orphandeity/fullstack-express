@@ -35,15 +35,6 @@ class UserModel {
       throw new Error(err)
     }
   }
-
-  async getUsers() {
-    try {
-      let result = await knex('users')
-      return result
-    } catch (err) {
-      throw new Error(err)
-    }
-  }
 }
 
 module.exports = new UserModel()
